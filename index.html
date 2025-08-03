@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAN APPLIANCE PROS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fb;
+      color: #222;
+    }
+    header {
+      background-color: #0d47a1;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+    }
+    header img.logo {
+      width: 80px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      border-radius: 50%;
+    }
+    nav button {
+      margin: 0 5px;
+      padding: 5px 10px;
+      background: white;
+      color: #0d47a1;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    nav button:hover {
+      background-color: #e0e0e0;
+    }
+    .section {
+      padding: 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease-in;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .service-card {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: scale(1.05);
+    }
+    .service-card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .whatsapp-btn:hover {
+      background-color: #1ebc57;
+    }
+    footer {
+      background: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Logo -->
+    <img class="logo" src="https://cdn.pixabay.com/photo/2014/04/02/10/58/tools-303337_640.png" alt="Logo">
+    <h1 id="title">TAN APPLIANCE PROS</h1>
+    <p id="tagline">Professional Appliance Repair Services</p>
+    <nav>
+      <button onclick="setLang('en')">English</button>
+      <button onclick="setLang('sw')">Kiswahili</button>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2 id="servicesTitle">Our Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <img src="https://cdn.pixabay.com/photo/2017/09/16/21/32/fridge-2755176_640.jpg" alt="Fridge">
+        <p id="service1">Fridge & Freezer Repair</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn.pixabay.com/photo/2020/03/30/21/54/washing-machine-4982022_640.jpg" alt="Washing Machine">
+        <p id="service2">Washing Machine Repair</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn.pixabay.com/photo/2013/07/12/17/00/air-conditioner-152631_640.png" alt="AC">
+        <p id="service3">AC Installation & Repair</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn.pixabay.com/photo/2017/03/23/19/57/microwave-2163284_640.png" alt="Microwave">
+        <p id="service4">Microwave, Cookers & More</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn.pixabay.com/photo/2018/01/15/07/51/plumber-3083182_640.jpg" alt="Plumbing">
+        <p id="service5">Plumbing Services</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn.pixabay.com/photo/2018/05/10/22/43/car-air-conditioning-3387290_640.jpg" alt="Car AC">
+        <p id="service6">Car AC Repair</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 id="contactTitle">Contact Us</h2>
+    <p><b>Phone/WhatsApp:</b> 0743412491</p>
+    <p><b>Location:</b> Dar es Salaam</p>
+    <a class="whatsapp-btn" href="https://wa.me/255743412491" target="_blank">
+      Chat on WhatsApp
+    </a>
+  </section>
+
+  <footer>
+    &copy; 2025 TAN APPLIANCE PROS
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        tagline: "Professional Appliance Repair Services",
+        servicesTitle: "Our Services",
+        service1: "Fridge & Freezer Repair",
+        service2: "Washing Machine Repair",
+        service3: "AC Installation & Repair",
+        service4: "Microwave, Cookers & More",
+        service5: "Plumbing Services",
+        service6: "Car AC Repair",
+        contactTitle: "Contact Us"
+      },
+      sw: {
+        tagline: "Huduma Bora za Matengenezo ya Vifaa vya Nyumbani",
+        servicesTitle: "Huduma Zetu",
+        service1: "Matengenezo ya Friji na Freezer",
+        service2: "Matengenezo ya Mashine za Kufua",
+        service3: "Ufungaji na Matengenezo ya A/C",
+        service4: "Microwave, Majiko na Zaidi",
+        service5: "Huduma za Ufundi Bomba",
+        service6: "Matengenezo ya A/C za Magari",
+        contactTitle: "Wasiliana Nasi"
+      }
+    };
+    function setLang(lang) {
+      document.getElementById("tagline").textContent = translations[lang].tagline;
+      document.getElementById("servicesTitle").textContent = translations[lang].servicesTitle;
+      document.getElementById("service1").textContent = translations[lang].service1;
+      document.getElementById("service2").textContent = translations[lang].service2;
+      document.getElementById("service3").textContent = translations[lang].service3;
+      document.getElementById("service4").textContent = translations[lang].service4;
+      document.getElementById("service5").textContent = translations[lang].service5;
+      document.getElementById("service6").textContent = translations[lang].service6;
+      document.getElementById("contactTitle").textContent = translations[lang].contactTitle;
+    }
+  </script>
+</body>
+</html>
